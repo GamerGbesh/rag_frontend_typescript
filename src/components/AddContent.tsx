@@ -29,13 +29,14 @@ function AddContent({course_id, library_id, activeFunction}: AddContentProps) {
             setLoading(false);
             return;
         }
-
+        // Use FormData when POST request contains files
         const formData = new FormData();
         formData.append("course_id", course_id as unknown as Blob);
         formData.append("library_id", library_id as unknown as Blob);
         formData.append("file", file)
+
         await api.post("Documents", formData, {headers: {
-                "Content-Type": "multipart/form-data",
+                "Content-Type": "multipart/form-data", // This ensures that the backend is ready for a form data
             },})
             .then(async () => {
                 setError(null);
