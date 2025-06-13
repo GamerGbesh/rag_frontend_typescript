@@ -67,7 +67,7 @@ function AutoResizingTextArea({
     }
 
     return (
-        <div className="fixed bottom-4 left-0 right-0 px-4 md:absolute md:bottom-16 md:right-[14%] md:left-auto md:w-2/3">
+        <div className="fixed bottom-4 left-0 right-0 px-4 md:bottom-8 md:right-[16%] md:left-auto md:w-2/3">
             <div className="flex items-end gap-2 w-full bg-white p-2 rounded-t-xl shadow-lg md:shadow-none md:bg-transparent">
         <textarea
             ref={textareaRef}
